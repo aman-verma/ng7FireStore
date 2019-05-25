@@ -1,0 +1,18 @@
+<table class="table table-hover">
+  <thead>
+    <th>Model</th>
+    <th>Barcode</th>
+    <th>Quantity</th>
+    <th>Date</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let purchase of list">
+      <td (click)="onEdit(purchase)">{{purchase.model}}</td>
+      <td (click)="onEdit(purchase)">{{purchase.barCode}}</td>
+      <td (click)="onEdit(purchase)">{{purchase.quantity}}</td>
+      <td (click)="onEdit(purchase)">{{purchase.date}}</td>
+      <td><a class="btn text-danger" (click)="onDelete(purchase.id)"><i class="fa fa-trash"></i></a></td>
+    </tr>
+  </tbody>
+</table>
